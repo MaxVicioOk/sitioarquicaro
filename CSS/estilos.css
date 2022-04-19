@@ -1,0 +1,240 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "CaroFont";
+    src: url("../fonts/bank-gothic-light-bt.ttf");
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    font-family: "CaroFont", sans-serif;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/*--- acá empieza el encabezado con navbar (HORAS para más o menos conseguir el efecto del encabezado con el navbar T.T)---*/
+
+header{
+    position: sticky;
+    top: -13.4rem;
+    grid-area: header;
+}
+.headerFondo{
+    background-image: url("../images/Fondo Arq y Dis 4.png");
+}
+.encabezado{
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 16.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+ul{
+    list-style-type: none;
+    width: 35%;
+    display: flex;
+}
+li {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+}
+ul ul {
+    position: absolute;
+    display: none;
+    background-color: gainsboro;
+    width: 100%;
+    border: solid 1px black;
+}
+ul ul li {
+    display: block;
+}
+ul li:hover ul {
+    display:block;
+}
+.navBar{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 35%;
+    bottom: 15px;
+    right: 25px;
+}
+.boton__navBar--subMenu{
+    text-align: left;
+    width: 100%;
+    background-color: gainsboro;
+    color: black;
+}
+.boton__navBar{
+    background-color: rgb(8, 8, 8);
+    color: rgb(224, 223, 223);
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin-right: 1px;
+    margin-left: 1px;
+    overflow: hidden;
+}
+
+/*--- acá empieza el main ---*/
+
+main{
+    display: grid;
+    grid-area: main;
+    grid-template-areas: ". principal horarios";
+    grid-template-columns: 1fr 3fr 1fr;
+
+}
+.principal{
+    width: 100%;
+    background-color: rgb(236, 237, 238);
+    grid-area: principal;
+}
+.horarios{
+    width: 12.5%;
+    grid-area: horarios;
+    justify-self: center;
+}
+h1{
+    text-align: center;
+    padding: 25px;
+}
+.principal section article img{
+    width: 49%;
+    height: 300px;
+    border-radius: 10px;
+}
+.principal section article{
+    padding: 10px;
+    margin: 15px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+article{
+    text-align: center;
+}
+.viviendas div{
+    text-align: center;
+}
+.oficinas div{
+    text-align: justify;
+}
+.interiores div{
+    text-align: end;
+}
+.horarios table{
+    width: 300px;
+}
+.horarios table tr td{
+    padding: 2px;
+    margin: 1px;
+    border: solid 1px black;
+}
+.horarios h2{
+    width: 100%;
+    text-align: center;
+}
+.horarios{
+    margin: 2px;
+    border: solid 2px black;
+    width: max-content;
+    height: max-content;
+}
+
+/*--- acá empieza el footer ---*/
+
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "logo links";
+    grid-template-columns: 5% auto;
+}
+footer div{
+    grid-area: links;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer img{
+    width: 100%;
+    grid-area: logo;
+}
+footer a img{
+    width: 20px;  
+}
+
+/* acá empieza la page de contacto */
+
+.principal form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.principal form fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+}
+.principal form fieldset div{
+    display: flex;
+    justify-content: center;
+}
+
+/* media query hasta 768px*/
+
+@media (max-width:768px){
+    main{
+        grid-template-areas: 
+        "principal"
+        "horarios";
+        grid-template-columns: 100%
+    }
+    .horarios{
+        width: 100%;
+        height: max-content;
+    }
+    .horarios table{
+        width: 100%;
+    }
+    .horarios h2{
+        width: 100%;
+        text-align: center;
+}
+.encabezado{
+    background-position: left;
+}
+.principal form fieldset{
+    width: 100%;
+}
+ul{
+    width: 55%;
+}
+ul li:hover{
+    width: max-content;
+}
+ul ul {
+    width: max-content;
+}
+.navBar{
+    width: 50%;
+    right: 25px;
+}
+}
