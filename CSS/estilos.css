@@ -58,7 +58,6 @@ ul ul {
     display: none;
     background-color: gainsboro;
     width: 100%;
-    border: solid 1px black;
 }
 ul ul li {
     display: block;
@@ -90,6 +89,11 @@ ul li:hover ul {
     margin-left: 1px;
     overflow: hidden;
 }
+.boton__navBar:hover{
+background-color: rgb(202, 202, 202);
+color: black;
+transform: translateY(5px);
+}
 
 /*--- acá empieza el main ---*/
 
@@ -118,6 +122,17 @@ h1{
     width: 49%;
     height: 300px;
     border-radius: 10px;
+    animation-name: viviendas;
+    animation-duration: 1s;
+}
+@keyframes viviendas {
+    0%{transform: scale(0);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+.principal section article img:hover{
+    height: 1%;
+    transform: scale(1.2);
 }
 .principal section article{
     padding: 10px;
@@ -127,6 +142,9 @@ h1{
 }
 article{
     text-align: center;
+}
+.gradiente{
+    background-image: linear-gradient(to top, rgb(133, 133, 133), #ffffff);
 }
 .viviendas div{
     text-align: center;
@@ -155,6 +173,7 @@ article{
     width: max-content;
     height: max-content;
 }
+
 
 /*--- acá empieza el footer ---*/
 
