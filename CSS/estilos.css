@@ -23,6 +23,7 @@ header{
     position: sticky;
     top: -13.4rem;
     grid-area: header;
+    z-index: 100;
 }
 .headerFondo{
     background-image: url("../images/Fondo Arq y Dis 4.png");
