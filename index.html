@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="CSS/bootstrap.css">
     <link rel="stylesheet" href="CSS/estilos.css">
 </head>
-<body>
-    <header>
-        <nav class= "encabezado headerFondo">
-            <ul class="navBar">
+<body class="container-fluid">
+    <header class="row">
+        <nav class= "encabezado headerFondo col-lg-12">
+            <ul class="navBar col-lg-5">
                 <li><a href="index.html" class="boton__navBar">Inicio</a></li>
                 <li><a href="pages/viviendas.html" class="boton__navBar">Viviendas</a>
                     <ul>
@@ -31,8 +31,8 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="principal">
+    <main class="row">
+        <div class="principal atras">
             <h1>Arquitectura Sustentable</h1>
             <section>
                 <div>
@@ -43,68 +43,85 @@
                     </article>
                 </div>
             </section>
-            <section>
-                <article class="viviendas gradiente">
+            <section class="row">
+                <article class="viviendas gradiente col-lg-6">
                     <div>
                         <h2><a href="pages/viviendas.html">Viviendas</a></h2>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, doloremque similique et dolorem rerum molestiae, dicta impedit ratione fuga nisi ipsa! Dolores quaerat fuga reprehenderit minus corporis impedit, voluptatibus repellat?</p>
                     </div>
-                    <img src="images/viviendas/vivienda 1.jpg" alt="casa1">
-                    <img src="images/viviendas/vivienda 2.jpg" alt="casa2">
+                    <div>
+                        <div id="carouselViviendas" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/viviendas/vivienda 1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/viviendas/vivienda 2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/viviendas/vivienda 3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
                 </article>
-                <article class="oficinas gradiente">
+                <article class="oficinas gradiente col-lg-6">
                     <div>
                         <h2><a href="pages/oficinas.html">Oficinas</a></h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam assumenda doloremque id non odit deleniti libero minus nemo aliquid quidem suscipit, omnis incidunt corrupti quos iure possimus explicabo magnam tempore!</p>
                     </div>
-                    <img src="images/oficinas/Portada.jpg" alt="Edificio Oficinas 1">
-                    <img src="images/oficinas/soto-1.jpg" alt="Edificio Oficinas 2">
+                    <div>
+                        <div id="carouselOficinas" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/oficinas/Portada.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/oficinas/soto-1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/oficinas/edificio 1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="interiores gradiente">
+                <article class="interiores gradiente col-lg-12">
                     <div>
                         <h2><a href="pages/viviendas.html#interiores viviendas">Interiores</a></h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nostrum praesentium perspiciatis eveniet odio fugiat et blanditiis nam sit omnis. Possimus porro quisquam iure. Magnam libero quibusdam impedit amet officiis?</p>
                     </div>
-                    <img src="images/interiores/interior 1.jpg" alt="" class="transform">
-                    <img src="images/interiores/interior 2.jpg" alt="" class="transform">
+                    <div class="row">
+                        <div id="carouselInterioresVivienda" class="carousel slide col-lg-6" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/interiores/interior 1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/interiores/interior 2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/interiores/interior 3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="carouselInterioresOficina" class="carousel slide col-lg-6" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/oficinas/ofi interior 1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/oficinas/ofi interior 2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/oficinas/ofi interior 3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
         </div>
-        <section class="horarios">
-            <h2>Horarios de Atención</h2>
-            <table>
-                <tr>
-                    <th>Días</th>
-                    <th>Mañana</th>
-                    <th>Tarde</th>
-                </tr>
-                <tr>
-                    <td>Lunes</td>
-                    <td>8hs a 12hs</td>
-                    <td>14hs a 18hs</td>
-                </tr>
-                <tr>
-                    <td>Martes</td>
-                    <td>8hs a 12hs</td>
-                    <td>14hs a 18hs</td>
-                </tr>
-                <tr>
-                    <td>Miercoles</td>
-                    <td>8hs a 12hs</td>
-                    <td>------------</td>
-                </tr>
-                <tr>
-                    <td>Jueves</td>
-                    <td>8hs a 12hs</td>
-                    <td>14hs a 18hs</td>
-                </tr>
-                <tr>
-                    <td>Viernes</td>
-                    <td>8hs a 12hs</td>
-                    <td>14hs a 18hs</td>
-                </tr>
-            </table>
-        </section>
     </main>
     <footer>
         <img src="images/CC LOGO 1-2.png" alt="Logo CC">

@@ -53,6 +53,7 @@ ul ul {
     display: none;
     background-color: gainsboro;
     width: 100%;
+    text-align: left;
 }
 ul ul li {
     display: block;
@@ -64,13 +65,11 @@ ul li:hover ul {
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 35%;
-    bottom: 15px;
     right: 25px;
 }
 .boton__navBar--subMenu{
     text-align: left;
-    width: 100%;
+    width: max-content;
     background-color: gainsboro;
     color: black;
 }
@@ -79,7 +78,7 @@ ul li:hover ul {
     color: rgb(224, 223, 223);
     display: block;
     text-align: center;
-    padding: 5px;
+    padding: 2px;
     margin-right: 1px;
     margin-left: 1px;
     overflow: hidden;
@@ -92,17 +91,19 @@ transform: translateY(5px);
 
 /*--- acá empieza el main ---*/
 
-main{
+/* main{
     display: grid;
     grid-area: main;
     grid-template-areas: ". principal horarios";
     grid-template-columns: 1fr 3fr 1fr;
-
-}
+} */
 .principal{
     width: 100%;
     background-color: rgb(236, 237, 238);
     grid-area: principal;
+}
+.atras{
+    z-index: -1;
 }
 .horarios{
     width: 12.5%;
@@ -115,8 +116,8 @@ h1{
 }
 .principal section article img{
     width: 49%;
-    height: 300px;
-    border-radius: 10px;
+    height: 500px;
+    padding: 10px;
     animation-name: viviendas;
     animation-duration: 1s;
 }
@@ -125,15 +126,14 @@ h1{
     50%{transform: scale(1.1);}
     100%{transform: scale(1);}
 }
-.principal section article img:hover{
-    height: 1%;
+/* .principal section article img:hover{
     transform: scale(1.2);
-}
+} */
 .principal section article{
-    padding: 10px;
-    margin: 15px;
-    border: solid 2px black;
-    border-radius: 10px;
+    padding: 30px;
+    /* margin: 1px;
+    border: solid 1px black;
+    border-radius: 10px; */
 }
 article{
     text-align: center;
@@ -142,13 +142,13 @@ article{
     background-image: linear-gradient(to top, rgb(133, 133, 133), #ffffff);
 }
 .viviendas div{
-    text-align: center;
-}
-.oficinas div{
     text-align: justify;
 }
-.interiores div{
+.oficinas div{
     text-align: end;
+}
+.interiores div{
+    text-align: center;
 }
 .horarios table{
     width: 300px;
@@ -158,17 +158,17 @@ article{
     margin: 1px;
     border: solid 1px black;
 }
-.horarios h2{
+.horarios table{
     width: 100%;
     text-align: center;
 }
 .horarios{
-    margin: 2px;
-    border: solid 2px black;
     width: max-content;
     height: max-content;
 }
-
+th{
+    border: solid 1px black;
+}
 
 /*--- acá empieza el footer ---*/
 
@@ -231,24 +231,33 @@ footer a img{
     .horarios h2{
         width: 100%;
         text-align: center;
+    }
+    .encabezado{
+        background-position: left;
+    }
+    .principal form fieldset{
+        width: 100%;
+    }
+    ul{
+        width: 55%;
+    }
+    ul li:hover{
+        width: max-content;
+    }
+    ul ul {
+        width: max-content;
+    }
+    .navBar{
+        width: 50%;
+        right: 25px;
+    }
+    .principal section article img{
+        width: 100%;
+    }
 }
-.encabezado{
-    background-position: left;
-}
-.principal form fieldset{
-    width: 100%;
-}
-ul{
-    width: 55%;
-}
-ul li:hover{
-    width: max-content;
-}
-ul ul {
-    width: max-content;
-}
-.navBar{
-    width: 50%;
-    right: 25px;
-}
+
+@media (max-width:1762px) {
+    ul ul {
+        width: max-content;
+    }
 }
