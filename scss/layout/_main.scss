@@ -5,12 +5,32 @@
     section{
         article{
             padding: 30px;
+            text-align: center;
             img{
-                width: 49%;
-                height: 500px;
-                padding: 10px;
-                animation-name: viviendas;
-                animation-duration: 1s;
+                height: 400px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            a{
+                img{
+                    height: 400px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    animation-name: viviendas;
+                    animation-duration: 1s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            div{
+                img{
+                    width: 49%;
+                    height: 500px;
+                    padding: 10px;
+                    animation-name: viviendas;
+                    animation-duration: 1s;
+                }
             }
         }
     }
@@ -35,9 +55,6 @@
 h1{
     text-align: center;
     padding: 25px;
-}
-article{
-    text-align: center;
 }
 .gradiente{
     background-image: linear-gradient(to top, rgb(133, 133, 133), #ffffff);

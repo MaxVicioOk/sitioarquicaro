@@ -18,9 +18,12 @@
     .principal {
         section {
             article {
-                img{
-                    width: 100%;
+                div{
+                    img{
+                        width: 100%;
+                    }
                 }
+                
             }
         }
         form {
@@ -54,6 +57,9 @@
         table{
             width: 100%;
         }
+    }
+    footer{
+        grid-template-columns: 10% auto;
     }
 }
 @media (max-width:1762px) {

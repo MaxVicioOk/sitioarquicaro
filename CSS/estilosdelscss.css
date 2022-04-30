@@ -84,8 +84,21 @@ ul {
   width: 100%;
   background-color: #ecedee; }
   .principal section article {
-    padding: 30px; }
+    padding: 30px;
+    text-align: center; }
     .principal section article img {
+      height: 400px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .principal section article a img {
+      height: 400px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      animation-name: viviendas;
+      animation-duration: 1s; }
+      .principal section article a img:hover {
+        transform: scale(1.05); }
+    .principal section article div img {
       width: 49%;
       height: 500px;
       padding: 10px;
@@ -109,9 +122,6 @@ ul {
 h1 {
   text-align: center;
   padding: 25px; }
-
-article {
-  text-align: center; }
 
 .gradiente {
   background-image: linear-gradient(to top, #858585, #ffffff); }
@@ -173,7 +183,7 @@ footer {
   .encabezado {
     height: 7rem;
     background-position: left bottom; }
-  .principal section article img {
+  .principal section article div img {
     width: 100%; }
   .principal form fieldset {
     width: 100%; }
@@ -193,7 +203,9 @@ footer {
       width: 100%;
       text-align: center; }
     .horarios table {
-      width: 100%; } }
+      width: 100%; }
+  footer {
+    grid-template-columns: 10% auto; } }
 
 @media (max-width: 1762px) {
   ul ul {
