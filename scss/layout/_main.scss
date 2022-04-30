@@ -1,0 +1,79 @@
+/*----MAIN----*/
+.principal{
+    width: 100%;
+    background-color: rgb(236, 237, 238);
+    section{
+        article{
+            padding: 30px;
+            img{
+                width: 49%;
+                height: 500px;
+                padding: 10px;
+                animation-name: viviendas;
+                animation-duration: 1s;
+            }
+        }
+    }
+    form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            width: 50%;
+            div{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+h1{
+    text-align: center;
+    padding: 25px;
+}
+article{
+    text-align: center;
+}
+.gradiente{
+    background-image: linear-gradient(to top, rgb(133, 133, 133), #ffffff);
+}
+.viviendas{
+    div{
+        text-align: justify;
+    }
+}
+.oficinas{
+    div{
+        text-align: end;
+    }
+}
+.interiores{
+    div{
+        text-align: center;
+    }
+}
+.horarios{
+    width: max-content;
+    height: max-content;
+    grid-area: horarios;
+    justify-self: center;
+    table{
+        width: 100%;
+        text-align: center;
+        tr {
+            th{
+                border: solid 1px black;
+            }
+            td{
+                padding: 2px;
+                margin: 1px;
+                border: solid 1px black;
+            }
+        }
+    }
+}

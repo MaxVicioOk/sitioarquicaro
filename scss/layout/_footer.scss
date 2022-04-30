@@ -1,0 +1,22 @@
+/*----FOOTER----*/
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "logo links";
+    grid-template-columns: 5% auto;
+    div{
+        grid-area: links;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    img{
+        width: 100%;
+        grid-area: logo;
+    }
+    a{
+        img{
+            width: 20px;  
+        }
+    }
+}

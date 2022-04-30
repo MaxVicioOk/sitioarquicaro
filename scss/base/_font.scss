@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "CaroFont";
+    src: url("../fonts/bank-gothic-light-bt.ttf");
+}
+body{
+    font-family: "CaroFont", sans-serif;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+a{
+    text-decoration: none;
+    color: black;
+}

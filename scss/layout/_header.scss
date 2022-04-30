@@ -1,0 +1,74 @@
+/*----ENCABEZADO----*/
+header{
+    position: sticky;
+    top: -13.4rem;
+    grid-area: header;
+    z-index: 100;
+}
+.headerFondo{
+    background-image: url("../images/Fondo Arq y Dis 4.png");
+}
+.encabezado{
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 16.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+/*----NAVBAR----*/
+ul{
+    list-style-type: none;
+    width: 35%;
+    display: flex;
+    li {
+        display: inline-block;
+        width: 20%;
+        position: relative;
+        &:hover {
+            ul {
+                display:block;
+            }
+        }
+        ul {
+            position: absolute;
+            display: none;
+            background-color: gainsboro;
+            width: 100%;
+            text-align: left;
+            li {
+                display: block;
+            }
+        }
+    }
+}
+.navBar{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 25px;
+}
+.boton__navBar{
+    background-color: rgb(8, 8, 8);
+    color: rgb(224, 223, 223);
+    display: block;
+    text-align: center;
+    padding: 2px;
+    margin-right: 1px;
+    margin-left: 1px;
+    overflow: hidden;
+    &:hover{
+        background-color: rgb(202, 202, 202);
+        color: black;
+        transform: translateY(5px);
+    }
+}
+.boton__navBar--subMenu{
+    text-align: left;
+    width: max-content;
+    background-color: gainsboro;
+    color: black;
+}

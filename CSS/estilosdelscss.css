@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "CaroFont";
+  src: url("../fonts/bank-gothic-light-bt.ttf"); }
+
+body {
+  font-family: "CaroFont", sans-serif;
+  position: relative;
+  display: grid;
+  grid-template-areas: "header" "main" "footer"; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+/*----ENCABEZADO----*/
+header {
+  position: sticky;
+  top: -13.4rem;
+  grid-area: header;
+  z-index: 100; }
+
+.headerFondo {
+  background-image: url("../images/Fondo Arq y Dis 4.png"); }
+
+.encabezado {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 16.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end; }
+
+/*----NAVBAR----*/
+ul {
+  list-style-type: none;
+  width: 35%;
+  display: flex; }
+  ul li {
+    display: inline-block;
+    width: 20%;
+    position: relative; }
+    ul li:hover ul {
+      display: block; }
+    ul li ul {
+      position: absolute;
+      display: none;
+      background-color: gainsboro;
+      width: 100%;
+      text-align: left; }
+      ul li ul li {
+        display: block; }
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 25px; }
+
+.boton__navBar {
+  background-color: #080808;
+  color: #e0dfdf;
+  display: block;
+  text-align: center;
+  padding: 2px;
+  margin-right: 1px;
+  margin-left: 1px;
+  overflow: hidden; }
+  .boton__navBar:hover {
+    background-color: #cacaca;
+    color: black;
+    transform: translateY(5px); }
+
+.boton__navBar--subMenu {
+  text-align: left;
+  width: max-content;
+  background-color: gainsboro;
+  color: black; }
+
+/*----MAIN----*/
+.principal {
+  width: 100%;
+  background-color: #ecedee; }
+  .principal section article {
+    padding: 30px; }
+    .principal section article img {
+      width: 49%;
+      height: 500px;
+      padding: 10px;
+      animation-name: viviendas;
+      animation-duration: 1s; }
+  .principal form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px; }
+    .principal form fieldset {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      width: 50%; }
+      .principal form fieldset div {
+        display: flex;
+        justify-content: center; }
+
+h1 {
+  text-align: center;
+  padding: 25px; }
+
+article {
+  text-align: center; }
+
+.gradiente {
+  background-image: linear-gradient(to top, #858585, #ffffff); }
+
+.viviendas div {
+  text-align: justify; }
+
+.oficinas div {
+  text-align: end; }
+
+.interiores div {
+  text-align: center; }
+
+.horarios {
+  width: max-content;
+  height: max-content;
+  grid-area: horarios;
+  justify-self: center; }
+  .horarios table {
+    width: 100%;
+    text-align: center; }
+    .horarios table tr th {
+      border: solid 1px black; }
+    .horarios table tr td {
+      padding: 2px;
+      margin: 1px;
+      border: solid 1px black; }
+
+/*----FOOTER----*/
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas: "logo links";
+  grid-template-columns: 5% auto; }
+  footer div {
+    grid-area: links;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  footer img {
+    width: 100%;
+    grid-area: logo; }
+  footer a img {
+    width: 20px; }
+
+/*----MEDIA QUERY----*/
+@keyframes viviendas {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@media (max-width: 768px) {
+  main {
+    grid-template-areas: "principal" "horarios";
+    grid-template-columns: 100%; }
+  .encabezado {
+    height: 7rem;
+    background-position: left bottom; }
+  .principal section article img {
+    width: 100%; }
+  .principal form fieldset {
+    width: 100%; }
+  ul {
+    width: 55%; }
+    ul li:hover {
+      width: max-content; }
+    ul li ul {
+      width: max-content; }
+  .navBar {
+    width: 50%;
+    right: 25px; }
+  .horarios {
+    width: 100%;
+    height: max-content; }
+    .horarios h2 {
+      width: 100%;
+      text-align: center; }
+    .horarios table {
+      width: 100%; } }
+
+@media (max-width: 1762px) {
+  ul ul {
+    width: max-content; } }

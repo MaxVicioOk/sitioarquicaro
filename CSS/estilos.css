@@ -103,9 +103,6 @@ transform: translateY(5px);
     background-color: rgb(236, 237, 238);
     grid-area: principal;
 }
-.atras{
-    z-index: -1;
-}
 .horarios{
     width: 12.5%;
     grid-area: horarios;
