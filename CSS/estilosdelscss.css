@@ -48,7 +48,7 @@ ul {
       position: absolute;
       display: none;
       background-color: gainsboro;
-      width: 100%;
+      width: auto;
       text-align: left; }
       ul li ul li {
         display: block; }
@@ -87,11 +87,9 @@ ul {
     padding: 30px;
     text-align: center; }
     .principal section article img {
-      height: 400px;
       padding-top: 10px;
       padding-bottom: 10px; }
     .principal section article a img {
-      height: 400px;
       padding-top: 10px;
       padding-bottom: 10px;
       animation-name: viviendas;
@@ -100,7 +98,6 @@ ul {
         transform: scale(1.05); }
     .principal section article div img {
       width: 49%;
-      height: 500px;
       padding: 10px;
       animation-name: viviendas;
       animation-duration: 1s; }
@@ -190,8 +187,6 @@ footer {
   ul {
     width: 55%; }
     ul li:hover {
-      width: max-content; }
-    ul li ul {
       width: max-content; }
   .navBar {
     width: 50%;
