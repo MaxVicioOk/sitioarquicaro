@@ -4,38 +4,15 @@
     50%{transform: scale(1.1);}
     100%{transform: scale(1);}
 }
-@media (max-width:768px){
-    main{
-        grid-template-areas: 
-        "principal"
-        "horarios";
-        grid-template-columns: 100%
-    }
+@media (max-width:991px) {
     header{
-        top: -7rem;
+        top: -7.3rem;
     }
     .encabezado{
-        height: 7rem;
+        height: 9rem;
         background-position: left bottom;
         padding: 0;
         margin: 0;
-    }
-    .principal {
-        section {
-            article {
-                div{
-                    img{
-                        width: 100%;
-                    }
-                }
-                
-            }
-        }
-        form {
-            fieldset{
-                width: 100%;
-            }
-        }
     }
     ul{
         width: 100vw;
@@ -71,7 +48,38 @@
         display: block;
         position: absolute;
         right: 15px;
-        bottom: 5px;
+        bottom: 45px;
+    }
+}
+@media (max-width:768px){
+    main{
+        grid-template-areas: 
+        "principal"
+        "horarios";
+        grid-template-columns: 100%
+    }
+    .encabezado{
+        height: 7rem;
+    }
+    .principal {
+        section {
+            article {
+                div{
+                    img{
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+        form {
+            fieldset{
+                width: 100%;
+            }
+        }
+    }
+    .nav-toggler{
+        bottom: 30px;
     }
     .horarios{
         width: 100%;

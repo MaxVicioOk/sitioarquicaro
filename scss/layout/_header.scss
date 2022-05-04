@@ -15,8 +15,8 @@ header{
     height: 16.5rem;
     position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    // flex-direction: row;
+    // justify-content: flex-end;
     align-items: flex-end;
 }
 /*----NAVBAR----*/
@@ -26,7 +26,7 @@ ul{
     display: flex;
     li {
         display: inline-block;
-        width: 20%;
+        width: 150px;
         position: relative;
         &:hover {
             ul {
@@ -50,6 +50,7 @@ ul{
     flex-direction: row;
     position: absolute;
     right: 25px;
+    padding-left: 0;
 }
 .boton__navBar{
     background-color: rgb(8, 8, 8);
