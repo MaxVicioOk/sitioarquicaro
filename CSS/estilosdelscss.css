@@ -34,12 +34,6 @@ header {
   align-items: flex-end; }
 
 /*----NAVBAR----*/
-#toggler {
-  display: none;
-  width: 40px;
-  height: 40px;
-  background: url(../images/icon-toggler.png) center; }
-
 ul {
   list-style-type: none;
   width: 35%;
@@ -84,6 +78,11 @@ ul {
   width: max-content;
   background-color: gainsboro;
   color: black; }
+
+.nav-toggler {
+  background: none;
+  border: none;
+  display: none; }
 
 /*----MAIN----*/
 .principal {
@@ -183,20 +182,46 @@ footer {
   main {
     grid-template-areas: "principal" "horarios";
     grid-template-columns: 100%; }
+  header {
+    top: -7rem; }
   .encabezado {
     height: 7rem;
-    background-position: left bottom; }
+    background-position: left bottom;
+    padding: 0;
+    margin: 0; }
   .principal section article div img {
     width: 100%; }
   .principal form fieldset {
     width: 100%; }
   ul {
-    width: 55%; }
-    ul li:hover {
-      width: max-content; }
+    width: 100vw; }
+    ul li {
+      width: 100vw; }
+      ul li ul {
+        width: 100vw; }
   .navBar {
-    width: 50%;
-    right: 25px; }
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -13.75rem;
+    right: 0;
+    margin: 0;
+    padding: 0; }
+  .boton__navBar {
+    width: 100vw;
+    margin: 0;
+    padding: 10px 0; }
+    .boton__navBar:hover {
+      width: 100vw;
+      transform: none; }
+  .navBar--visible {
+    top: 13.75rem;
+    transition: 0.4s; }
+  .nav-toggler {
+    display: block;
+    position: absolute;
+    right: 15px;
+    bottom: 5px; }
   .horarios {
     width: 100%;
     height: max-content; }
