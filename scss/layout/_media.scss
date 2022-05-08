@@ -95,4 +95,12 @@
     footer{
         grid-template-columns: 10% auto;
     }
+    .nombreRed{
+        display: none;
+    }
+}
+@media (max-width: 340px){
+    footer{
+        grid-template-columns: 15% auto;
+    }
 }
