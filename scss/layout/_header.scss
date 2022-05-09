@@ -9,15 +9,7 @@ header{
     background-image: url("../images/Fondo Arq y Dis 4.png");
 }
 .encabezado{
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 16.5rem;
-    position: relative;
-    display: flex;
-    // flex-direction: row;
-    // justify-content: flex-end;
-    align-items: flex-end;
+    @include desafio(encabezado);
 }
 /*----NAVBAR----*/
 ul{
@@ -53,25 +45,15 @@ ul{
     padding-left: 0;
 }
 .boton__navBar{
-    background-color: rgb(8, 8, 8);
-    color: rgb(224, 223, 223);
-    display: block;
-    text-align: center;
-    padding: 2px;
-    margin-right: 1px;
-    margin-left: 1px;
-    overflow: hidden;
+    @include desafio(botnav);
     &:hover{
-        background-color: rgb(202, 202, 202);
+        background-color: map-get($colores, tres);
         color: black;
         transform: translateY(5px);
     }
 }
 .boton__navBar--subMenu{
-    text-align: left;
-    width: max-content;
-    background-color: gainsboro;
-    color: black;
+    @include desafio(submenu);
 }
 .nav-toggler{
     background: none;

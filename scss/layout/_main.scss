@@ -1,19 +1,18 @@
 /*----MAIN----*/
 .principal{
     width: 100%;
-    background-color: rgb(236, 237, 238);
+    background-color: map-get($colores, cuatro);
     section{
         article{
             padding: 30px;
             text-align: center;
             img{
                 padding-top: 10px;
-                padding-bottom: 10px;
+                padding-bottom: 15px;
             }
             a{
                 img{
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    @extend img ;
                     animation-name: viviendas;
                     animation-duration: 1s;
                     &:hover{
@@ -32,43 +31,35 @@
         }
     }
     form{
+        @include disp (flex, center);
         width: 100%;
-        display: flex;
-        justify-content: center;
         margin-bottom: 50px;
         fieldset{
-            display: flex;
+            @include disp (flex, center);
             flex-direction: column;
-            justify-content: center;
             padding: 10px;
             width: 50%;
             div{
-                display: flex;
-                justify-content: center;
+                @include disp (flex, center);
             }
         }
     }
 }
 h1{
+    text-decoration: underline;
     text-align: center;
     padding: 25px;
 }
+h2{
+    @extend h1 ;
+    padding: 0px;
+}
 .gradiente{
-    background-image: linear-gradient(to top, rgb(133, 133, 133), #ffffff);
+    background-image: linear-gradient(to top, map-get($colores, cinco), #ffffff);
 }
-.viviendas{
-    div{
-        text-align: justify;
-    }
-}
-.oficinas{
-    div{
-        text-align: end;
-    }
-}
-.interiores{
-    div{
-        text-align: center;
+@each $nombre, $texto in $mainDiv {
+    .#{$nombre} div{
+        text-align: $texto;
     }
 }
 .horarios{
@@ -84,9 +75,9 @@ h1{
                 border: solid 1px black;
             }
             td{
+                @extend th ;
                 padding: 2px;
                 margin: 1px;
-                border: solid 1px black;
             }
         }
     }

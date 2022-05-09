@@ -1,0 +1,47 @@
+$mainDiv:(
+    "viviendas": justify,
+    "oficinas": end,
+    "interiores": center,
+);
+$colores:(
+    "uno": rgb(8, 8, 8),
+    "dos": rgb(224, 223, 223),
+    "tres": rgb(202, 202, 202),
+    "cuatro": rgb(236, 237, 238),
+    "cinco": rgb(133, 133, 133),
+);
+@mixin pad ($arriba, $abajo){
+    padding-top: $arriba;
+    padding-bottom: $abajo;
+}
+@mixin disp ($var1, $var2){
+    display: $var1;
+    justify-content: $var2;
+}
+@mixin desafio ($corto) {
+    @if $corto == encabezado{
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 16.5rem;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+    }
+    @else if $corto == botnav{
+        background-color: map-get($colores, uno);
+        color: map-get($colores, dos);
+        display: block;
+        text-align: center;
+        padding: 2px;
+        margin-right: 1px;
+        margin-left: 1px;
+        overflow: hidden;
+    }
+    @else if $corto == submenu{
+        text-align: left;
+        width: max-content;
+        background-color: gainsboro;
+        color: black;
+    }
+}

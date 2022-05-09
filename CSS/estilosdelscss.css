@@ -90,12 +90,10 @@ ul {
   .principal section article {
     padding: 30px;
     text-align: center; }
-    .principal section article img {
+    .principal section article img, .principal section article a img {
       padding-top: 10px;
-      padding-bottom: 10px; }
+      padding-bottom: 15px; }
     .principal section article a img {
-      padding-top: 10px;
-      padding-bottom: 10px;
       animation-name: viviendas;
       animation-duration: 1s; }
       .principal section article a img:hover {
@@ -106,23 +104,27 @@ ul {
       animation-name: viviendas;
       animation-duration: 1s; }
   .principal form {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
     margin-bottom: 50px; }
     .principal form fieldset {
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      flex-direction: column;
       padding: 10px;
       width: 50%; }
       .principal form fieldset div {
         display: flex;
         justify-content: center; }
 
-h1 {
+h1, h2 {
+  text-decoration: underline;
   text-align: center;
   padding: 25px; }
+
+h2 {
+  padding: 0px; }
 
 .gradiente {
   background-image: linear-gradient(to top, #858585, #ffffff); }
@@ -144,12 +146,11 @@ h1 {
   .horarios table {
     width: 100%;
     text-align: center; }
-    .horarios table tr th {
+    .horarios table tr th, .horarios table tr td {
       border: solid 1px black; }
     .horarios table tr td {
       padding: 2px;
-      margin: 1px;
-      border: solid 1px black; }
+      margin: 1px; }
 
 /*----FOOTER----*/
 footer {
@@ -162,10 +163,10 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center; }
-  footer img {
+  footer img, footer .principal section article a img, .principal section article a footer img {
     width: 100%;
     grid-area: logo; }
-  footer a img {
+  footer a img, footer .principal section article a img, .principal section article footer a img {
     width: 20px; }
 
 /*----MEDIA QUERY----*/
