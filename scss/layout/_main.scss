@@ -46,13 +46,8 @@
     }
 }
 h1{
-    text-decoration: underline;
     text-align: center;
     padding: 25px;
-}
-h2{
-    @extend h1 ;
-    padding: 0px;
 }
 .gradiente{
     background-image: linear-gradient(to top, map-get($colores, cinco), #ffffff);

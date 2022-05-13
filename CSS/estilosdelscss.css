@@ -118,13 +118,9 @@ ul {
         display: flex;
         justify-content: center; }
 
-h1, h2 {
-  text-decoration: underline;
+h1 {
   text-align: center;
   padding: 25px; }
-
-h2 {
-  padding: 0px; }
 
 .gradiente {
   background-image: linear-gradient(to top, #858585, #ffffff); }
